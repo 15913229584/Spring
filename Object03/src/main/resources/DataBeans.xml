@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      <bean id="student" class="edu.nf.obj03.demo1.Student">
+            <property name="id" value="00001"></property>
+            <property name="name" value="张三"></property>
+            <property name="sex" value="男"></property>
+            <property name="age" value="20"></property>
+            <property name="hobby">
+                        <list>
+                                <value>阅读</value>
+                                <value>听音乐</value>
+                                <value>唱歌</value>
+                                <value>围棋</value>
+                        </list>
+            </property>
+            <property name="subject">
+                        <map>
+                            <entry key="语文" value="001"></entry>
+                            <entry key="数学" value="002"></entry>
+                            <entry key="英语" value="003"></entry>
+                        </map>
+            </property>
+            <property name="prop">
+                <props>
+                        <prop key="One">奥数班</prop>
+                        <prop key="Two">舞蹈班</prop>
+                </props>
+            </property>
+      </bean>
+
+   <bean id="teacher" class="edu.nf.obj03.demo1.Teacher">
+       <constructor-arg name="id" value="00001"></constructor-arg>
+       <constructor-arg name="name" value="李华"></constructor-arg>
+       <constructor-arg name="sex" value="男"></constructor-arg>
+       <constructor-arg name="age" value="43"></constructor-arg>
+       <constructor-arg name="hobby">
+                        <list>
+                               <value>写作</value>
+                               <value>阅读</value>
+                               <value>绘画</value>
+                        </list>
+       </constructor-arg>
+       <constructor-arg name="subject">
+                        <map>
+                            <entry key="语文" value="001"></entry>
+                            <entry key="数学" value="002"/>
+                            <entry key="英语" value="003"></entry>
+                        </map>
+       </constructor-arg>
+
+       <constructor-arg name="prop">
+                        <props>
+                                <prop key="One">语文老师</prop>
+                                <prop key="Two">英语老师</prop>
+                        </props>
+       </constructor-arg>
+
+   </bean>
+</beans>

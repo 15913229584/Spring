@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- init-method指定bean的初始化方法，destory-method指定bean的销毁方法-->
+        <!--<bean id="people" class="edu.nf.ch04.People" init-method="init" destroy-method="destory"></bean>-->
+        <!--bean的两种初始化方法
+        1.实现InitializingBean接口，接口中包含一个afterPropertiesSet方法
+        2.在Bean中自定义初始化方法，并在配置文件中init-method属性在指定初始化方法
+        注意：如果InitializingBean接口和init-method 一起使用，
+        那么先执行InitializingBean接口的方法
+        -->
+        <!--bean的销毁方法
+        两种方式：
+        1.实现DisposableBean接口，此接口包含一个destory方法
+        2.在Bean中自定义销毁方法，并在配置文件中通过destory-method指定
+        注意：如果两者同时使用，DisposableBean接口先执行，再执行自定义的销毁方法
+
+        声明周期执行顺序：
+        1.构造方法
+        2.InitalizingBean的afterPropertiesSet
+        3.init -method
+        4.DisposableBean的destory方法
+        5.detory-method
+        -->
+        <bean id="users" class="edu.nf.ch04.Users" init-method="init" destroy-method="myDestory"></bean>
+
+        <!--配置BeanPostProcessor(BPP) -->
+        <bean class="edu.nf.ch04.Processor.MyProcessor"></bean>
+</beans>

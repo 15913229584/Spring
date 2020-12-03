@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="users" class="edu.nf.obj01.Users"></bean>
+        <bean id="people" class="edu.nf.obj01.People"></bean>
+
+        <bean id="peoplefactoryBean" class="factory.PeopleFactoryBean"></bean>
+        <bean id="people1" factory-bean="peoplefactoryBean" factory-method="build"></bean>
+
+        <bean id ="animals" class="factory.AnimalsFactory" factory-method="create"></bean>
+
+        <bean id="PeopleA1" class="edu.nf.obj01.People" scope="singleton"></bean>
+        <bean id="PeopleA2" class="edu.nf.obj01.People" scope="prototype"></bean>
+
+        <bean id="rabbit" name="r1,r2,r3" scope="prototype" class="edu.nf.obj01.Rabbit"></bean>
+
+        <bean id="panadaMore" name="p1,p2,p3"  class="factory.PanadaFactory" scope="prototype" factory-method="set"></bean>
+
+
+</beans>

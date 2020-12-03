@@ -1,0 +1,34 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+Object01/target/generated-sources/
+Object01/target/generated-test-sources/
+Object02/target/generated-sources/
+Object02/target/generated-test-sources/
+Object03/src/main/java/edu/nf/obj03/demo2/service/
+Object03/target/generated-sources/
+Object03/target/generated-test-sources/
+Object04/src/
+ch01/target/generated-sources/
+ch01/target/generated-test-sources/
+ch02/target/generated-sources/
+ch02/target/generated-test-sources/
+ch04/target/generated-sources/
+ch04/target/generated-test-sources/
+ch05/target/generated-sources/
+ch05/target/generated-test-sources/
+ch06/src/test/java/edu/
+ch06/target/generated-sources/
+ch06/target/generated-test-sources/
+ch07/src/main/java/edu/nf/ch07/demo2/
+ch08/target/generated-sources/
+ch08/target/generated-test-sources/
+ch09/target/generated-sources/
+ch09/target/generated-test-sources/
+color-sheme/src/

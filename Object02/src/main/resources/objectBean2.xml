@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+       <!--运行所有方法-->
+       <!--<bean id="students" class="edu.nf.obj02.Students" init-method="init" destroy-method="destory"></bean>-->
+       <!--配置处理器-->
+       <!--<bean class="edu.nf.obj02.myProcessor"></bean>-->
+
+       <bean id="userDao" class="edu.nf.obj02.Users.dao.impl.UserDaoImpl"></bean>
+       <bean id="userService" class="edu.nf.obj02.Users.services.impl.UserServiceImpl">
+              <!--<property name="dao" ref="userDao"></property>-->
+
+              <!--构造方法注入,name指定构造方法的参数名，ref引用UserDao的id -->
+              <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+              <!-- index表示参数的下标-->
+              <!-- <constructor-arg index="0" ref="UserDao">-->
+       </bean>
+
+</beans>
